@@ -1,9 +1,15 @@
 # kubernetes-elastic-kafka
 
 ## Findings
-+ ELK Stack - (1)
-   + Elasticsearch, Kibana, Logstash
-   + Expanded with Kafka
++ EFK Stack
+  + Chad stack
+  + Elasticsearch, Fluent, Kibana
+    + Queue built into Fluent
+    + Data collection using Fluent Bit
++ ELK/TEK Stack
+   + Elasticsearch, Logstash, Kibana
+   + Expanded with Kafka because of Logstash being unable to handle queueing by itself
+      + Uses Beats+Tyk for data collection
  + We are doing "User Centric API Metrics"
     + Tracking the individual user's behaviour
        + When do they leave the adoption funnel
